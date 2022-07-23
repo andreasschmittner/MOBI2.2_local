@@ -13,18 +13,16 @@ git clone https://github.com/andreasschmittner/MOBI2.2_local.git
 ```
 cd o2_n_fe_si_ca_caco3_c13_n15_c14
 ```
-2. Copy the data directory from [MOBI2.1](https://github.com/andreasschmittner/MOBI2.1_local.git) and add the file from this data directory to it.
+3. Download the [data directory](https://drive.google.com/drive/folders/1BWZ2PRZ5qf-h6Y3bcSTyycul3VuvPwH4?usp=sharing) and move it to your local run directory
 ```
-cp -r PATH/MOBI2.1_local/data .
-cp ../data/* data/.
+mv PATH/data .
 ```
-3. Modify the `run.q` script so that the path reflects your current working directory. This is the file that you submit to the job scheduler. It works on OSU's Humboldt cluster. If you work on a different computer you may have to adjust it. I also like to rename the script so that you can distinguish it from other runs you have going on.
-
-4. Compile code
+4. Modify the `run.q` script so that the path reflects your current working directory. This is the file that you submit to the job scheduler. It works on OSU's Humboldt cluster. If you work on a different computer you may have to adjust it. I also like to rename the script so that you can distinguish it from other runs you have going on.
+5. Compile code
 ```
 mk e
 ```
-5. If compilation was successful you should see the executable (UVic_ESCM) and you can start your simulation by submitting the run script.
+6. If compilation was successful you should see the executable (UVic_ESCM) and you can start your simulation by submitting the run script.
 ```
 qsub run.q
 ```
